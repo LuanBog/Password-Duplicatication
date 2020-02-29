@@ -9,7 +9,7 @@ x = round(Int(15000)*Rnd()+1)
 Randomize
 y = round(Int(8500)*Rnd()+1)
 
-password = "watashi-wa-firipinjin-desu"
+password = "Iseeyouarelookingatthisfile"
 user_input = inputbox("Password: ", "", "", x, y)
 
 function duplicate()
